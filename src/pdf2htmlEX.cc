@@ -408,12 +408,12 @@ int main(int argc, char **argv)
             throw "Cannot read the file";
 
         // check for copy permission
-        if (!doc->okToCopy())
-        {
-            if (param.no_drm == 0)
-                throw "Copying of text from this document is not allowed.";
-            cerr << "Document has copy-protection bit set." << endl;
-        }
+        //if (!doc->okToCopy())
+        //{
+        //    if (param.no_drm == 0)
+        //        throw "Copying of text from this document is not allowed.";
+        //    cerr << "Document has copy-protection bit set." << endl;
+        //}
 
         param.first_page = min<int>(max<int>(param.first_page, 1), doc->getNumPages());
         param.last_page = min<int>(max<int>(param.last_page, param.first_page), doc->getNumPages());
